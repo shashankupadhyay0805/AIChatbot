@@ -98,7 +98,7 @@ export const chatbotConfig = {
   // Rate limiting configuration
   rateLimit: {
     // Token bucket settings
-    capacity: 5,
+    capacity: 15,
     refillRate: 2,
     interval: 10,
 
