@@ -91,7 +91,7 @@ export const chatbotConfig = {
     inputPlaceholder: "Message AI Assistant...",
 
     // Avatar image (place in public folder)
-    avatarImage: "/ai-avatar.png",
+    avatarImage: "",
     avatarFallback: "AI",
   },
 
@@ -110,7 +110,7 @@ export const chatbotConfig = {
   // API configuration
   api: {
     // AI model provider
-    model: "gemini-2.5-flash-lite",
+    model: "gemini-1.5-flash",
 
     // Updated System Prompt
     systemPrompt: `You are a helpful AI assistant.

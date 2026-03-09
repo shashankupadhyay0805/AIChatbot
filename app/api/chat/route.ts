@@ -4,7 +4,7 @@ import { aj, getRateLimitHeaders } from "@/lib/arcjet";
 import { chatbotConfig } from "@/lib/config";
 import { headers } from "next/headers";
 import { Profanity } from "@2toad/profanity";
-
+export const runtime = "edge";
 export const maxDuration = 30;
 
 const profanity = new Profanity();
@@ -30,12 +30,20 @@ const validateMessages = (messages: UIMessage[]): boolean => {
 export async function POST(req: Request) {
   try {
     const headersList = await headers();
-    const referer = headersList.get("referer") || "";
+    // const referer = headersList.get("referer") || "";
 
-    // Check referer (basic CSRF protection)
-    if (!referer.includes(process.env.NEXT_PUBLIC_APP_URL || "localhost")) {
-      return new Response("Forbidden - Invalid referer", { status: 403 });
-    }
+    // // Check referer (basic CSRF protection)
+    // if (!referer.includes(process.env.NEXT_PUBLIC_APP_URL || "localhost")) {
+    //   return new Response("Forbidden - Invalid referer", { status: 403 });
+    // }
+    const referer = headersList.get("referer");
+
+if (
+  referer &&
+  !referer.includes(process.env.NEXT_PUBLIC_APP_URL || "localhost")
+) {
+  return new Response("Forbidden - Invalid referer", { status: 403 });
+}
 
     // Use Arcjet for bot protection and rate limiting
     const decision = await aj.protect(req, { requested: 1 });
