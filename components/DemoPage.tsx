@@ -67,7 +67,7 @@ export default function DemoPage() {
               </Button>
               <Button variant="ghost" asChild>
                 <Link
-                  href="https://rryyqn.com/projects/ai-chatbot"
+                  href="https://github.com/shashankupadhyay0805"
                   target="_blank"
                 >
                   See Blog <BookText />
