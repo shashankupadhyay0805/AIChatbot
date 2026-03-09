@@ -46,7 +46,7 @@ export default function DemoPage() {
       <header className="border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="text-xl font-semibold">Chatbot Demo</div>
+            <div className="text-xl font-semibold">NovaAI</div>
             <div className="flex flex-row items-center gap-2">
               <Button
                 variant="ghost"
@@ -82,7 +82,7 @@ export default function DemoPage() {
       <section className="py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Open Source AI Chatbot Template
+           AI Chatbot
           </h1>
           <p className="text-primary mb-8 max-w-2xl mx-auto text-pretty">
             Open the chatbot in the bottom-right to start a conversation
@@ -134,11 +134,10 @@ export default function DemoPage() {
       <section className="px-2 my-20">
         <div className="container mx-auto px-4 text-center bg-gradient-to-bl from-primary/90 to-black py-20 rounded-2xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
-            Get The Template
+            
           </h2>
           <p className="text-ring mb-4 mx-auto">
-            Docs and instructions are in the GitHub repository. Give it a star
-            while you&apos;re at it ;&#41;
+            
           </p>
         </div>
       </section>
