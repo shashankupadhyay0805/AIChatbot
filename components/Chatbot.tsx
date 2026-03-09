@@ -53,11 +53,11 @@ const ChatBotWrapper = () => {
   }, [isOpen]);
   return (
     <div>
-      <Button
-        size="md"
-        className="fixed bottom-5 right-5 rounded-full p-5 h-fit"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+    <Button
+  size="default"
+  className="fixed bottom-5 right-5 rounded-full p-4 h-fit"
+  onClick={() => setIsOpen(!isOpen)}
+>
         <MessageSquareIcon className="size-6" />
       </Button>
       <AnimatePresence mode="wait">
