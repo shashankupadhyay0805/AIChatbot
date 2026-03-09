@@ -28,6 +28,14 @@ const validateMessages = (messages: UIMessage[]): boolean => {
 };
 
 export async function POST(req: Request) {
+  // ensure required API keys are available
+  if (!process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
+    console.error("Missing GOOGLE_GENERATIVE_AI_API_KEY");
+    return new Response("Server misconfiguration: missing Google API key", {
+      status: 500,
+    });
+  }
+
   try {
     const headersList = await headers();
     // const referer = headersList.get("referer") || "";
